@@ -2,554 +2,271 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090611">
-  <meta name="description" content="NOTFAKE T7 — links oficiais e pré-inscrição nas mentorias digitais.">
-  <title>NOTFAKE T7 | Links e Mentorias</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090611">
+<meta name="description" content="NOTFAKE T7 — links oficiais e mentorias digitais.">
+<title>NOTFAKE T7 | Links e Mentorias</title>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--purple:#a855f7;--pink:#ec4899;--white:#fff}
+html{scroll-behavior:smooth}
+body{
+ min-height:100vh;padding:28px 16px;
+ font-family:Arial,Helvetica,sans-serif;color:var(--white);
+ background:linear-gradient(#08051270,#080512c9),
+ url("https://raw.githubusercontent.com/rochasilvaalisson74-hub/Theo-7-links./main/file_00000000004c820e9a01bd385faa25c1.png")
+ center/cover fixed no-repeat;
+}
+.glow{position:fixed;z-index:0;width:240px;height:240px;border-radius:50%;
+ background:var(--purple);filter:blur(110px);opacity:.24;pointer-events:none}
+.glow.one{top:-70px;left:-80px}
+.glow.two{right:-90px;bottom:-80px;background:var(--pink)}
+.container{position:relative;z-index:1;width:100%;max-width:760px;margin:auto}
+.card,.section{
+ background:rgba(12,9,24,.86);border:1px solid #ffffff2e;
+ border-radius:25px;box-shadow:0 20px 70px #0006;
+ backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
+}
+.card{max-width:430px;margin:0 auto 24px;padding:32px 23px 25px;text-align:center}
+.logo{
+ width:82px;height:82px;margin:0 auto 17px;display:grid;place-items:center;
+ border-radius:23px;background:linear-gradient(135deg,var(--purple),var(--pink));
+ box-shadow:0 0 30px #a855f759;font-size:29px;font-weight:900
+}
+h1{font-size:clamp(27px,7vw,35px);font-weight:900;letter-spacing:2px;margin-bottom:10px}
+.subtitle,.section-intro{color:#d5cde4;font-size:14px;line-height:1.7}
+.subtitle{margin-bottom:23px}
+.line{width:64px;height:3px;border-radius:10px;margin:0 auto 24px;background:linear-gradient(90deg,var(--purple),var(--pink))}
+.links,.form{display:grid;gap:12px}
+.link,.button{
+ position:relative;display:flex;align-items:center;justify-content:center;
+ width:100%;min-height:53px;padding:15px 14px;border:1px solid #ffffff33;
+ border-radius:14px;color:white;text-decoration:none;text-align:center;
+ font-size:13px;font-weight:800;letter-spacing:.45px;
+ background:#ffffff13;cursor:pointer;transition:transform .2s,box-shadow .2s
+}
+.link:hover,.button:hover{transform:translateY(-2px);box-shadow:0 0 22px #a855f740}
+.primary{border-color:transparent;background:linear-gradient(110deg,#7c3aed,#c026d3)}
+.icon{position:absolute;left:15px;font-size:18px}
+.section{padding:26px 20px;margin-bottom:24px}
+.section h2{text-align:center;font-size:clamp(23px,5vw,30px);margin-bottom:10px}
+.section-intro{text-align:center;margin-bottom:23px}
+.notice{padding:12px 14px;margin-bottom:20px;border:1px solid #d8b4fe4d;border-radius:12px;color:#e9d5ff;background:#a855f71a;font-size:12px;line-height:1.7}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.plan{display:flex;flex-direction:column;padding:17px 13px;border:1px solid #ffffff29;border-radius:17px;background:#ffffff0b}
+.plan.featured{border-color:var(--purple);box-shadow:0 0 22px #a855f721}
+.plan h3{font-size:15px;line-height:1.4;margin-bottom:12px}
+.price{font-size:24px;font-weight:900;margin-bottom:13px}
+.plan ul{padding-left:17px;color:#ddd5e9;font-size:12px;line-height:1.65;margin-bottom:18px}
+.plan .button{margin-top:auto;font-size:11px;min-height:44px}
+.field label{display:block;margin-bottom:8px;font-size:13px;font-weight:700}
+.field select{width:100%;padding:13px;border:1px solid #ffffff33;border-radius:11px;color:white;background:#171126;font-size:14px}
+.field select option{color:white;background:#171126}
+.result{display:none;margin-top:20px;padding:17px;border:1px solid #a855f780;border-radius:14px;background:#a855f71a}
+.result h3{margin-bottom:9px}
+.result p{color:#e1d8ed;font-size:13px;line-height:1.7;margin-bottom:14px}
+.small{color:#c0b4d1;font-size:11px;line-height:1.7;text-align:center;margin-top:17px}
+.footer{padding:4px 0 20px;color:#c0b4d1;font-size:11px;letter-spacing:1.5px;text-align:center}
 
-    :root {
-      --purple: #a855f7;
-      --pink: #ec4899;
-      --white: #ffffff;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      min-height: 100vh;
-      padding: 28px 16px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--white);
-      background:
-        linear-gradient(rgba(8, 5, 18, .48), rgba(8, 5, 18, .78)),
-        url("https://raw.githubusercontent.com/rochasilvaalisson74-hub/Theo-7-links./main/file_00000000004c820e9a01bd385faa25c1.png")
-        center / cover fixed no-repeat;
-    }
-
-    .glow {
-      position: fixed;
-      z-index: 0;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: var(--purple);
-      filter: blur(110px);
-      opacity: .24;
-      pointer-events: none;
-    }
-
-    .glow.one { top: -70px; left: -80px; }
-    .glow.two {
-      right: -90px;
-      bottom: -80px;
-      background: var(--pink);
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .card, .section {
-      background: rgba(12, 9, 24, .86);
-      border: 1px solid rgba(255, 255, 255, .18);
-      border-radius: 25px;
-      box-shadow: 0 20px 70px rgba(0, 0, 0, .42);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-
-    .card {
-      max-width: 430px;
-      margin: 0 auto 24px;
-      padding: 32px 23px 25px;
-      text-align: center;
-    }
-
-    .logo {
-      width: 82px;
-      height: 82px;
-      margin: 0 auto 17px;
-      display: grid;
-      place-items: center;
-      border-radius: 23px;
-      background: linear-gradient(135deg, var(--purple), var(--pink));
-      box-shadow: 0 0 30px rgba(168, 85, 247, .35);
-      font-size: 29px;
-      font-weight: 900;
-      letter-spacing: -2px;
-    }
-
-    h1 {
-      font-size: clamp(27px, 7vw, 35px);
-      font-weight: 900;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle, .section-intro {
-      color: #d5cde4;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .subtitle { margin-bottom: 23px; }
-
-    .line {
-      width: 64px;
-      height: 3px;
-      border-radius: 10px;
-      margin: 0 auto 24px;
-      background: linear-gradient(90deg, var(--purple), var(--pink));
-    }
-
-    .links, .form { display: grid; gap: 12px; }
-
-    .link, .button {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-height: 53px;
-      padding: 15px 14px;
-      border: 1px solid rgba(255, 255, 255, .2);
-      border-radius: 14px;
-      color: white;
-      text-decoration: none;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .45px;
-      background: rgba(255, 255, 255, .075);
-      cursor: pointer;
-      transition: transform .2s, box-shadow .2s, background .2s;
-    }
-
-    .link:hover, .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 22px rgba(168, 85, 247, .25);
-    }
-
-    .primary {
-      border-color: transparent;
-      background: linear-gradient(110deg, #7c3aed, #c026d3);
-    }
-
-    .icon {
-      position: absolute;
-      left: 15px;
-      font-size: 18px;
-    }
-
-    .section {
-      padding: 26px 20px;
-      margin-bottom: 24px;
-    }
-
-    .section h2 {
-      text-align: center;
-      font-size: clamp(23px, 5vw, 30px);
-      margin-bottom: 10px;
-    }
-
-    .section-intro {
-      text-align: center;
-      margin-bottom: 23px;
-    }
-
-    .notice {
-      padding: 12px 14px;
-      margin-bottom: 20px;
-      border: 1px solid rgba(216, 180, 254, .3);
-      border-radius: 12px;
-      color: #e9d5ff;
-      background: rgba(168, 85, 247, .1);
-      font-size: 12px;
-      line-height: 1.7;
-    }
-
-    .plans {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .plan {
-      display: flex;
-      flex-direction: column;
-      padding: 17px 13px;
-      border: 1px solid rgba(255, 255, 255, .16);
-      border-radius: 17px;
-      background: rgba(255, 255, 255, .045);
-    }
-
-    .plan.featured {
-      border-color: var(--purple);
-      box-shadow: 0 0 22px rgba(168, 85, 247, .13);
-    }
-
-    .plan h3 {
-      font-size: 15px;
-      line-height: 1.4;
-      margin-bottom: 12px;
-    }
-
-    .price {
-      font-size: 24px;
-      font-weight: 900;
-      margin-bottom: 13px;
-    }
-
-    .plan ul {
-      padding-left: 17px;
-      color: #ddd5e9;
-      font-size: 12px;
-      line-height: 1.65;
-      margin-bottom: 18px;
-    }
-
-    .plan .button {
-      margin-top: auto;
-      font-size: 11px;
-      min-height: 44px;
-    }
-
-    .field label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .field select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid rgba(255, 255, 255, .2);
-      border-radius: 11px;
-      color: white;
-      background: #171126;
-      font-size: 14px;
-    }
-
-    .field select option {
-      color: white;
-      background: #171126;
-    }
-
-    .result {
-      display: none;
-      margin-top: 20px;
-      padding: 17px;
-      border: 1px solid rgba(168, 85, 247, .5);
-      border-radius: 14px;
-      background: rgba(168, 85, 247, .1);
-    }
-
-    .result h3 { margin-bottom: 9px; }
-
-    .result p {
-      color: #e1d8ed;
-      font-size: 13px;
-      line-height: 1.7;
-      margin-bottom: 14px;
-    }
-
-    .small {
-      color: #c0b4d1;
-      font-size: 11px;
-      line-height: 1.7;
-      text-align: center;
-      margin-top: 17px;
-    }
-
-    .footer {
-      padding: 4px 0 20px;
-      color: #c0b4d1;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-align: center;
-    }
-
-    @media (max-width: 650px) {
-      body { background-attachment: scroll; }
-      .plans { grid-template-columns: 1fr; }
-      .plan { padding: 19px; }
-      .price { font-size: 27px; }
-      .plan ul { font-size: 13px; }
-      .section { padding: 23px 16px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-    }
-  </style>
+/* ABERTURA ANIMADA DO DRAGÃO */
+#dragon-intro{
+ position:fixed;inset:0;z-index:9999;overflow:hidden;
+ display:grid;place-items:center;
+ background:radial-gradient(ellipse at center,#351052,#10051c 50%,#030207);
+ animation:intro-exit 1s ease 6.5s forwards;
+}
+.dragon-scene{position:relative;text-align:center;width:100%;padding:20px}
+.dragon{
+ font-size:clamp(110px,32vw,230px);
+ filter:drop-shadow(0 0 22px #a855f7);
+ animation:dragon-entry 1.8s ease-out both,dragon-roar 1s ease-in-out 1.8s 2;
+}
+.dragon-fire{
+ width:18px;height:14px;margin:-4px auto 24px;border-radius:50%;
+ background:#fff0a0;
+ box-shadow:0 0 20px 14px #ff7b00,0 0 55px 30px #ff2600,0 0 90px 45px #a855f7;
+ animation:fire-blast .8s ease-in-out 2s 3;
+}
+.dragon-title{
+ font-size:clamp(32px,9vw,58px);font-weight:900;color:white;
+ text-shadow:0 0 25px #a855f7;
+ animation:reveal-title .8s ease 3s both;
+}
+.dragon-title span{color:#ec4899}
+.dragon-message{
+ margin-top:12px;letter-spacing:3px;font-size:11px;color:#e9d5ff;
+ animation:reveal-title .7s ease 3.5s both;
+}
+#skip-intro{
+ position:absolute;bottom:25px;right:18px;padding:12px 15px;color:white;
+ background:#21102f;border:1px solid var(--purple);border-radius:12px;
+ cursor:pointer;font-weight:bold
+}
+#dragon-intro.finished{display:none}
+@keyframes dragon-entry{
+ from{transform:translateY(-100vh) scale(.25) rotate(-15deg);opacity:0}
+ to{transform:translateY(0) scale(1) rotate(0);opacity:1}
+}
+@keyframes dragon-roar{
+ 0%,100%{transform:scale(1)}
+ 50%{transform:scale(1.1) rotate(-3deg)}
+}
+@keyframes fire-blast{
+ 0%{transform:scale(.5);opacity:.3}
+ 50%{transform:scale(8,3);opacity:1}
+ 100%{transform:scale(1);opacity:.2}
+}
+@keyframes reveal-title{
+ from{opacity:0;transform:translateY(25px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@keyframes intro-exit{
+ to{opacity:0;visibility:hidden;pointer-events:none}
+}
+@media(max-width:650px){
+ body{background-attachment:scroll}
+ .plans{grid-template-columns:1fr}
+ .plan{padding:19px}
+ .price{font-size:27px}
+ .plan ul{font-size:13px}
+ .section{padding:23px 16px}
+}
+@media(prefers-reduced-motion:reduce){
+ #dragon-intro{animation-duration:.5s}
+ .dragon,.dragon-fire,.dragon-title,.dragon-message{animation-duration:.5s;animation-delay:0s}
+}
+</style>
 </head>
-
 <body>
-  <div class="glow one"></div>
-  <div class="glow two"></div>
 
-  <main class="container">
+<!-- CENA INICIAL -->
+<div id="dragon-intro" aria-label="Abertura animada NOTFAKE T7">
+ <div class="dragon-scene">
+  <div class="dragon" aria-hidden="true">🐉</div>
+  <div class="dragon-fire"></div>
+  <div class="dragon-title">NOTFAKE <span>T7</span></div>
+  <p class="dragon-message">O FOGO ESTÁ CHEGANDO...</p>
+ </div>
+ <button id="skip-intro" type="button">PULAR ANIMAÇÃO »</button>
+</div>
 
-    <header class="card">
-      <div class="logo">T7</div>
-      <h1>NOTFAKE T7</h1>
-      <p class="subtitle">
-        Bem-vindo ao nosso espaço oficial.<br>
-        Escolha abaixo onde deseja acessar.
-      </p>
-      <div class="line"></div>
+<div class="glow one"></div>
+<div class="glow two"></div>
 
-      <nav class="links" aria-label="Links oficiais">
-        <a class="link primary"
-           href="https://project-z81u0-ozbk40wp4-rochasilvaalisson74-hubs-projects.vercel.app/"
-           target="_blank" rel="noopener noreferrer">
-          <span class="icon">🌐</span> ACESSAR O SITE
-        </a>
+<main class="container">
+ <header class="card">
+  <div class="logo">T7</div>
+  <h1>NOTFAKE T7</h1>
+  <p class="subtitle">Bem-vindo ao nosso espaço oficial.<br>Escolha abaixo onde deseja acessar.</p>
+  <div class="line"></div>
+  <nav class="links" aria-label="Links oficiais">
+   <a class="link primary" href="https://project-z81u0-ozbk40wp4-rochasilvaalisson74-hubs-projects.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="icon">🌐</span>ACESSAR O SITE</a>
+   <a class="link" href="https://www.tiktok.com/@t7.digital?_r=1&_t=ZS-9AZozRI0Vle" target="_blank" rel="noopener noreferrer"><span class="icon">🎵</span>TIKTOK OFICIAL</a>
+   <a class="link" href="https://www.instagram.com/notfake.t7?xtok=YzE3ZHc4NmRqbW9k&utm_source=qr" target="_blank" rel="noopener noreferrer"><span class="icon">📸</span>INSTAGRAM OFICIAL</a>
+   <a class="link" href="https://chat.whatsapp.com/LnGAvwhtxd2IWUxkmBZSWW?mode=gi_t" target="_blank" rel="noopener noreferrer"><span class="icon">💬</span>GRUPO DO WHATSAPP</a>
+   <a class="link primary" href="#mentorias"><span class="icon">🚀</span>CONHECER AS MENTORIAS T7</a>
+  </nav>
+  <p class="small">NOTFAKE T7 · LINKS OFICIAIS</p>
+ </header>
 
-        <a class="link"
-           href="https://www.tiktok.com/@t7.digital?_r=1&_t=ZS-9AZozRI0Vle"
-           target="_blank" rel="noopener noreferrer">
-          <span class="icon">🎵</span> TIKTOK OFICIAL
-        </a>
+ <section class="section" id="mentorias">
+  <h2>ESCOLHA SUA JORNADA T7</h2>
+  <p class="section-intro">Conheça as opções de orientação sobre divulgação, abordagem e vendas digitais.</p>
+  <div class="notice"><strong>Pré-inscrições:</strong> o conteúdo das aulas ainda está sendo preparado. Antes de pagar, confirme pelo WhatsApp a data de início, as entregas e as condições de contratação.</div>
 
-        <a class="link"
-           href="https://www.instagram.com/notfake.t7?xtok=YzE3ZHc4NmRqbW9k&utm_source=qr"
-           target="_blank" rel="noopener noreferrer">
-          <span class="icon">📸</span> INSTAGRAM OFICIAL
-        </a>
+  <div class="plans">
+   <article class="plan">
+    <h3>🚀 T7 Primeira Venda</h3><div class="price">R$ 120,00</div>
+    <ul><li>Introdução às vendas digitais</li><li>Roteiro de divulgação previsto</li><li>Orientação de abordagem prevista</li><li>Suporte por 7 dias</li></ul>
+    <a class="button" href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20T7%20Primeira%20Venda%20de%20R%24%20120." target="_blank" rel="noopener noreferrer">TENHO INTERESSE</a>
+   </article>
+   <article class="plan featured">
+    <h3>📈 Método T7 — Renda Extra</h3><div class="price">R$ 280,00</div>
+    <ul><li>Planejamento de divulgação previsto</li><li>Orientação de abordagem prevista</li><li>Plano de atividades previsto</li><li>Suporte por 30 dias</li></ul>
+    <a class="button primary" href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20M%C3%A9todo%20T7%20de%20R%24%20280." target="_blank" rel="noopener noreferrer">TENHO INTERESSE</a>
+   </article>
+   <article class="plan">
+    <h3>👑 T7 Mentoria VIP</h3><div class="price">R$ 400,00</div>
+    <ul><li>Orientação personalizada prevista</li><li>Plano de ação individual previsto</li><li>2 encontros individuais em 30 dias</li><li>Suporte por 30 dias</li></ul>
+    <a class="button" href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20T7%20Mentoria%20VIP%20de%20R%24%20400." target="_blank" rel="noopener noreferrer">TENHO INTERESSE</a>
+   </article>
+  </div>
+  <p class="small"><strong>Suporte dos três planos:</strong> WhatsApp todos os dias, das 08h às 22h, horário de Brasília. As respostas acontecem conforme a fila de mensagens; não há garantia de resposta instantânea. O período de suporte começa conforme as condições combinadas na contratação. Resultados financeiros não são garantidos.</p>
+ </section>
 
-        <a class="link"
-           href="https://chat.whatsapp.com/LnGAvwhtxd2IWUxkmBZSWW?mode=gi_t"
-           target="_blank" rel="noopener noreferrer">
-          <span class="icon">💬</span> GRUPO DO WHATSAPP
-        </a>
+ <section class="section" id="questionario">
+  <h2>DESCUBRA SEU PLANO</h2>
+  <p class="section-intro">Responda a quatro perguntas para receber uma sugestão de plano. A recomendação não garante renda ou vendas.</p>
+  <form class="form" id="quiz">
+   <div class="field"><label for="idade">1. Qual é sua faixa etária?</label><select id="idade" required><option value="">Selecione</option><option value="menor">Menos de 18 anos</option><option value="18-24">18 a 24 anos</option><option value="25-34">25 a 34 anos</option><option value="35+">35 anos ou mais</option></select></div>
+   <div class="field"><label for="meta">2. Qual é sua meta mensal de renda extra?</label><select id="meta" required><option value="">Selecione</option><option value="500">Até R$ 500</option><option value="1500">R$ 500 a R$ 1.500</option><option value="3000">R$ 1.500 a R$ 3.000</option><option value="mais">Mais de R$ 3.000</option></select></div>
+   <div class="field"><label for="experiencia">3. Você já tentou vender algo?</label><select id="experiencia" required><option value="">Selecione</option><option value="nao">Ainda não</option><option value="alguma">Já tentei algumas vezes</option><option value="sim">Já vendo regularmente</option></select></div>
+   <div class="field"><label for="tempo">4. Quanto tempo pode dedicar por dia?</label><select id="tempo" required><option value="">Selecione</option><option value="1">Menos de 1 hora</option><option value="2">1 a 2 horas</option><option value="3">3 horas ou mais</option></select></div>
+   <button class="button primary" type="submit">VER MINHA RECOMENDAÇÃO</button>
+  </form>
+  <div class="result" id="resultado" aria-live="polite"><h3 id="resultadoTitulo"></h3><p id="resultadoTexto"></p><a class="button primary" id="resultadoWhats" href="https://wa.me/5514981687557" target="_blank" rel="noopener noreferrer">CONVERSAR NO WHATSAPP</a></div>
+  <p class="small">As respostas são usadas nesta página para sugerir um plano. O formulário não envia nem armazena suas respostas em um banco de dados.</p>
+ </section>
 
-        <a class="link primary" href="#mentorias">
-          <span class="icon">🚀</span> CONHECER AS MENTORIAS T7
-        </a>
-      </nav>
+ <footer class="footer">NOTFAKE T7 · APRENDA · PRATIQUE · EVOLUA</footer>
+</main>
 
-      <p class="small">NOTFAKE T7 · LINKS OFICIAIS</p>
-    </header>
+<script>
+/* CONTROLE DA ABERTURA */
+(function(){
+ const intro=document.getElementById("dragon-intro");
+ const skip=document.getElementById("skip-intro");
+ let finished=false;
+ function finishIntro(){
+  if(finished)return;
+  finished=true;
+  intro.classList.add("finished");
+ }
+ skip.addEventListener("click",finishIntro);
+ intro.addEventListener("animationend",function(event){
+  if(event.animationName==="intro-exit")finishIntro();
+ });
+})();
 
-    <section class="section" id="mentorias">
-      <h2>ESCOLHA SUA JORNADA T7</h2>
-      <p class="section-intro">
-        Conheça as opções de orientação sobre divulgação, abordagem e vendas digitais.
-      </p>
+/* QUESTIONÁRIO */
+const quiz=document.getElementById("quiz");
+const resultado=document.getElementById("resultado");
+const resultadoTitulo=document.getElementById("resultadoTitulo");
+const resultadoTexto=document.getElementById("resultadoTexto");
+const resultadoWhats=document.getElementById("resultadoWhats");
 
-      <div class="notice">
-        <strong>Pré-inscrições:</strong> o conteúdo das aulas ainda está
-        sendo preparado. Antes de pagar, confirme pelo WhatsApp a data de
-        início, as entregas e as condições de contratação.
-      </div>
+quiz.addEventListener("submit",function(event){
+ event.preventDefault();
+ const idade=document.getElementById("idade").value;
+ const meta=document.getElementById("meta").value;
+ const experiencia=document.getElementById("experiencia").value;
+ const tempo=document.getElementById("tempo").value;
 
-      <div class="plans">
-        <article class="plan">
-          <h3>🚀 T7 Primeira Venda</h3>
-          <div class="price">R$ 120,00</div>
-          <ul>
-            <li>Introdução às vendas digitais</li>
-            <li>Roteiro de divulgação previsto</li>
-            <li>Orientação de abordagem prevista</li>
-            <li>Suporte por 7 dias</li>
-          </ul>
-          <a class="button"
-             href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20T7%20Primeira%20Venda%20de%20R%24%20120."
-             target="_blank" rel="noopener noreferrer">
-            TENHO INTERESSE
-          </a>
-        </article>
-
-        <article class="plan featured">
-          <h3>📈 Método T7 — Renda Extra</h3>
-          <div class="price">R$ 280,00</div>
-          <ul>
-            <li>Planejamento de divulgação previsto</li>
-            <li>Orientação de abordagem prevista</li>
-            <li>Plano de atividades previsto</li>
-            <li>Suporte por 30 dias</li>
-          </ul>
-          <a class="button primary"
-             href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20M%C3%A9todo%20T7%20de%20R%24%20280."
-             target="_blank" rel="noopener noreferrer">
-            TENHO INTERESSE
-          </a>
-        </article>
-
-        <article class="plan">
-          <h3>👑 T7 Mentoria VIP</h3>
-          <div class="price">R$ 400,00</div>
-          <ul>
-            <li>Orientação personalizada prevista</li>
-            <li>Plano de ação individual previsto</li>
-            <li>2 encontros individuais em 30 dias</li>
-            <li>Suporte por 30 dias</li>
-          </ul>
-          <a class="button"
-             href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20T7%20Mentoria%20VIP%20de%20R%24%20400."
-             target="_blank" rel="noopener noreferrer">
-            TENHO INTERESSE
-          </a>
-        </article>
-      </div>
-
-      <p class="small">
-        <strong>Suporte dos três planos:</strong> WhatsApp todos os dias,
-        das 08h às 22h, horário de Brasília. As respostas acontecem conforme
-        a fila de mensagens; não há garantia de resposta instantânea.
-        O período de suporte começa conforme as condições combinadas na contratação.
-        Resultados financeiros não são garantidos.
-      </p>
-    </section>
-
-    <section class="section" id="questionario">
-      <h2>DESCUBRA SEU PLANO</h2>
-      <p class="section-intro">
-        Responda a quatro perguntas para receber uma sugestão de plano.
-        A recomendação não garante renda ou vendas.
-      </p>
-
-      <form class="form" id="quiz">
-        <div class="field">
-          <label for="idade">1. Qual é sua faixa etária?</label>
-          <select id="idade" required>
-            <option value="">Selecione</option>
-            <option value="menor">Menos de 18 anos</option>
-            <option value="18-24">18 a 24 anos</option>
-            <option value="25-34">25 a 34 anos</option>
-            <option value="35+">35 anos ou mais</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="meta">2. Qual é sua meta mensal de renda extra?</label>
-          <select id="meta" required>
-            <option value="">Selecione</option>
-            <option value="500">Até R$ 500</option>
-            <option value="1500">R$ 500 a R$ 1.500</option>
-            <option value="3000">R$ 1.500 a R$ 3.000</option>
-            <option value="mais">Mais de R$ 3.000</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="experiencia">3. Você já tentou vender algo?</label>
-          <select id="experiencia" required>
-            <option value="">Selecione</option>
-            <option value="nao">Ainda não</option>
-            <option value="alguma">Já tentei algumas vezes</option>
-            <option value="sim">Já vendo regularmente</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="tempo">4. Quanto tempo pode dedicar por dia?</label>
-          <select id="tempo" required>
-            <option value="">Selecione</option>
-            <option value="1">Menos de 1 hora</option>
-            <option value="2">1 a 2 horas</option>
-            <option value="3">3 horas ou mais</option>
-          </select>
-        </div>
-
-        <button class="button primary" type="submit">
-          VER MINHA RECOMENDAÇÃO
-        </button>
-      </form>
-
-      <div class="result" id="resultado" aria-live="polite">
-        <h3 id="resultadoTitulo"></h3>
-        <p id="resultadoTexto"></p>
-        <a class="button primary" id="resultadoWhats"
-           href="https://wa.me/5514981687557"
-           target="_blank" rel="noopener noreferrer">
-          CONVERSAR NO WHATSAPP
-        </a>
-      </div>
-
-      <p class="small">
-        As respostas são usadas nesta página para sugerir um plano.
-        O formulário não envia nem armazena suas respostas em um banco de dados.
-      </p>
-    </section>
-
-    <footer class="footer">
-      NOTFAKE T7 · APRENDA · PRATIQUE · EVOLUA
-    </footer>
-  </main>
-
-  <script>
-    const quiz = document.getElementById("quiz");
-    const resultado = document.getElementById("resultado");
-    const resultadoTitulo = document.getElementById("resultadoTitulo");
-    const resultadoTexto = document.getElementById("resultadoTexto");
-    const resultadoWhats = document.getElementById("resultadoWhats");
-
-    quiz.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const idade = document.getElementById("idade").value;
-      const meta = document.getElementById("meta").value;
-      const experiencia = document.getElementById("experiencia").value;
-      const tempo = document.getElementById("tempo").value;
-
-      if (idade === "menor") {
-        resultadoTitulo.textContent = "Converse com um responsável";
-        resultadoTexto.textContent =
-          "Se você tem menos de 18 anos, converse com seu responsável antes de contratar. Confirmem juntos o conteúdo, o preço e as condições.";
-        resultadoWhats.href =
-          "https://wa.me/5514981687557?text=" +
-          encodeURIComponent("Olá! Quero conhecer as condições das mentorias T7 com meu responsável.");
-      } else {
-        let plano;
-        let preco;
-        let motivo;
-
-        if (experiencia === "nao") {
-          plano = "T7 Primeira Venda";
-          preco = "R$ 120,00";
-          motivo = "pode ser um ponto de partida para estudar os fundamentos de divulgação e abordagem.";
-        } else if (experiencia === "sim" || meta === "mais" || tempo === "3") {
-          plano = "T7 Mentoria VIP";
-          preco = "R$ 400,00";
-          motivo = "pode ser uma opção para quem busca orientação personalizada e dois encontros individuais.";
-        } else {
-          plano = "Método T7 — Renda Extra";
-          preco = "R$ 280,00";
-          motivo = "pode ajudar a estruturar uma rotina de divulgação e atividades.";
-        }
-
-        resultadoTitulo.textContent = "Plano sugerido: " + plano;
-        resultadoTexto.textContent =
-          "Pelas suas respostas, esse plano " + motivo +
-          " Valor anunciado: " + preco +
-          ". Não há garantia de renda ou vendas. Como as aulas estão em preparação, confirme pelo WhatsApp a data de início, as entregas e as condições antes de contratar.";
-
-        resultadoWhats.href =
-          "https://wa.me/5514981687557?text=" +
-          encodeURIComponent(
-            "Olá! Respondi ao questionário NOTFAKE T7. O plano sugerido foi " +
-            plano + " (" + preco +
-            "). Quero saber a data de início, as entregas e as condições de suporte."
-          );
-      }
-
-      resultado.style.display = "block";
-      resultado.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    });
-  </script>
+ if(idade==="menor"){
+  resultadoTitulo.textContent="Converse com um responsável";
+  resultadoTexto.textContent="Se você tem menos de 18 anos, converse com seu responsável antes de contratar. Confirmem juntos o conteúdo, o preço e as condições.";
+  resultadoWhats.href="https://wa.me/5514981687557?text="+encodeURIComponent("Olá! Quero conhecer as condições das mentorias T7 com meu responsável.");
+ }else{
+  let plano,preco,motivo;
+  if(experiencia==="nao"){
+   plano="T7 Primeira Venda";preco="R$ 120,00";
+   motivo="pode ser um ponto de partida para estudar os fundamentos de divulgação e abordagem.";
+  }else if(experiencia==="sim"||meta==="mais"||tempo==="3"){
+   plano="T7 Mentoria VIP";preco="R$ 400,00";
+   motivo="pode ser uma opção para quem busca orientação personalizada e dois encontros individuais.";
+  }else{
+   plano="Método T7 — Renda Extra";preco="R$ 280,00";
+   motivo="pode ajudar a estruturar uma rotina de divulgação e atividades.";
+  }
+  resultadoTitulo.textContent="Plano sugerido: "+plano;
+  resultadoTexto.textContent="Pelas suas respostas, esse plano "+motivo+" Valor anunciado: "+preco+". Não há garantia de renda ou vendas. Como as aulas estão em preparação, confirme pelo WhatsApp a data de início, as entregas e as condições antes de contratar.";
+  resultadoWhats.href="https://wa.me/5514981687557?text="+encodeURIComponent("Olá! Respondi ao questionário NOTFAKE T7. O plano sugerido foi "+plano+" ("+preco+"). Quero saber a data de início, as entregas e as condições de suporte.");
+ }
+ resultado.style.display="block";
+ resultado.scrollIntoView({behavior:"smooth",block:"nearest"});
+});
+</script>
 </body>
 </html>
