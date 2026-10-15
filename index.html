@@ -10,263 +10,1009 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--purple:#a855f7;--pink:#ec4899;--white:#fff}
+
+:root{
+ --purple:#a855f7;
+ --pink:#ec4899;
+ --white:#fff;
+ --dark:#080512;
+}
+
 html{scroll-behavior:smooth}
+
 body{
- min-height:100vh;padding:28px 16px;
- font-family:Arial,Helvetica,sans-serif;color:var(--white);
- background:linear-gradient(#08051270,#080512c9),
+ min-height:100vh;
+ padding:28px 16px;
+ font-family:Arial,Helvetica,sans-serif;
+ color:var(--white);
+ background:
+ linear-gradient(#08051270,#080512c9),
  url("https://raw.githubusercontent.com/rochasilvaalisson74-hub/Theo-7-links./main/file_00000000004c820e9a01bd385faa25c1.png")
  center/cover fixed no-repeat;
 }
-.glow{position:fixed;z-index:0;width:240px;height:240px;border-radius:50%;
- background:var(--purple);filter:blur(110px);opacity:.24;pointer-events:none}
+
+button,a,select{font-family:inherit}
+
+.glow{
+ position:fixed;
+ z-index:0;
+ width:240px;
+ height:240px;
+ border-radius:50%;
+ background:var(--purple);
+ filter:blur(110px);
+ opacity:.24;
+ pointer-events:none;
+}
+
 .glow.one{top:-70px;left:-80px}
 .glow.two{right:-90px;bottom:-80px;background:var(--pink)}
-.container{position:relative;z-index:1;width:100%;max-width:760px;margin:auto}
-.card,.section{
- background:rgba(12,9,24,.86);border:1px solid #ffffff2e;
- border-radius:25px;box-shadow:0 20px 70px #0006;
- backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
-}
-.card{max-width:430px;margin:0 auto 24px;padding:32px 23px 25px;text-align:center}
-.logo{
- width:82px;height:82px;margin:0 auto 17px;display:grid;place-items:center;
- border-radius:23px;background:linear-gradient(135deg,var(--purple),var(--pink));
- box-shadow:0 0 30px #a855f759;font-size:29px;font-weight:900
-}
-h1{font-size:clamp(27px,7vw,35px);font-weight:900;letter-spacing:2px;margin-bottom:10px}
-.subtitle,.section-intro{color:#d5cde4;font-size:14px;line-height:1.7}
-.subtitle{margin-bottom:23px}
-.line{width:64px;height:3px;border-radius:10px;margin:0 auto 24px;background:linear-gradient(90deg,var(--purple),var(--pink))}
-.links,.form{display:grid;gap:12px}
-.link,.button{
- position:relative;display:flex;align-items:center;justify-content:center;
- width:100%;min-height:53px;padding:15px 14px;border:1px solid #ffffff33;
- border-radius:14px;color:white;text-decoration:none;text-align:center;
- font-size:13px;font-weight:800;letter-spacing:.45px;
- background:#ffffff13;cursor:pointer;transition:transform .2s,box-shadow .2s
-}
-.link:hover,.button:hover{transform:translateY(-2px);box-shadow:0 0 22px #a855f740}
-.primary{border-color:transparent;background:linear-gradient(110deg,#7c3aed,#c026d3)}
-.icon{position:absolute;left:15px;font-size:18px}
-.section{padding:26px 20px;margin-bottom:24px}
-.section h2{text-align:center;font-size:clamp(23px,5vw,30px);margin-bottom:10px}
-.section-intro{text-align:center;margin-bottom:23px}
-.notice{padding:12px 14px;margin-bottom:20px;border:1px solid #d8b4fe4d;border-radius:12px;color:#e9d5ff;background:#a855f71a;font-size:12px;line-height:1.7}
-.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.plan{display:flex;flex-direction:column;padding:17px 13px;border:1px solid #ffffff29;border-radius:17px;background:#ffffff0b}
-.plan.featured{border-color:var(--purple);box-shadow:0 0 22px #a855f721}
-.plan h3{font-size:15px;line-height:1.4;margin-bottom:12px}
-.price{font-size:24px;font-weight:900;margin-bottom:13px}
-.plan ul{padding-left:17px;color:#ddd5e9;font-size:12px;line-height:1.65;margin-bottom:18px}
-.plan .button{margin-top:auto;font-size:11px;min-height:44px}
-.field label{display:block;margin-bottom:8px;font-size:13px;font-weight:700}
-.field select{width:100%;padding:13px;border:1px solid #ffffff33;border-radius:11px;color:white;background:#171126;font-size:14px}
-.field select option{color:white;background:#171126}
-.result{display:none;margin-top:20px;padding:17px;border:1px solid #a855f780;border-radius:14px;background:#a855f71a}
-.result h3{margin-bottom:9px}
-.result p{color:#e1d8ed;font-size:13px;line-height:1.7;margin-bottom:14px}
-.small{color:#c0b4d1;font-size:11px;line-height:1.7;text-align:center;margin-top:17px}
-.footer{padding:4px 0 20px;color:#c0b4d1;font-size:11px;letter-spacing:1.5px;text-align:center}
 
-/* ABERTURA ANIMADA DO DRAGÃO */
+.container{
+ position:relative;
+ z-index:1;
+ width:100%;
+ max-width:760px;
+ margin:auto;
+}
+
+.card,.section{
+ background:rgba(12,9,24,.86);
+ border:1px solid #ffffff2e;
+ border-radius:25px;
+ box-shadow:0 20px 70px #0006;
+ backdrop-filter:blur(16px);
+ -webkit-backdrop-filter:blur(16px);
+}
+
+.card{
+ max-width:430px;
+ margin:0 auto 24px;
+ padding:32px 23px 25px;
+ text-align:center;
+}
+
+.logo{
+ width:82px;
+ height:82px;
+ margin:0 auto 17px;
+ display:grid;
+ place-items:center;
+ border-radius:23px;
+ background:linear-gradient(135deg,var(--purple),var(--pink));
+ box-shadow:0 0 30px #a855f759;
+ font-size:29px;
+ font-weight:900;
+ animation:logo-glow 3s ease-in-out infinite;
+}
+
+h1{
+ font-size:clamp(27px,7vw,35px);
+ font-weight:900;
+ letter-spacing:2px;
+ margin-bottom:10px;
+}
+
+.subtitle,.section-intro{
+ color:#d5cde4;
+ font-size:14px;
+ line-height:1.7;
+}
+
+.subtitle{margin-bottom:23px}
+
+.line{
+ width:64px;
+ height:3px;
+ border-radius:10px;
+ margin:0 auto 24px;
+ background:linear-gradient(90deg,var(--purple),var(--pink));
+}
+
+.links,.form{display:grid;gap:12px}
+
+.link,.button{
+ position:relative;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ width:100%;
+ min-height:53px;
+ padding:15px 14px;
+ border:1px solid #ffffff33;
+ border-radius:14px;
+ color:white;
+ text-decoration:none;
+ text-align:center;
+ font-size:13px;
+ font-weight:800;
+ letter-spacing:.45px;
+ background:#ffffff13;
+ cursor:pointer;
+ transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+
+.link:hover,.button:hover{
+ transform:translateY(-3px);
+ box-shadow:0 0 25px #a855f755;
+ border-color:#c084fc;
+}
+
+.primary{
+ border-color:transparent;
+ background:linear-gradient(110deg,#7c3aed,#c026d3);
+ box-shadow:0 0 18px #a855f72b;
+}
+
+.icon{
+ position:absolute;
+ left:15px;
+ font-size:18px;
+}
+
+.section{
+ padding:26px 20px;
+ margin-bottom:24px;
+}
+
+.section h2{
+ text-align:center;
+ font-size:clamp(23px,5vw,30px);
+ margin-bottom:10px;
+}
+
+.section-intro{
+ text-align:center;
+ margin-bottom:23px;
+}
+
+.notice{
+ padding:12px 14px;
+ margin-bottom:20px;
+ border:1px solid #d8b4fe4d;
+ border-radius:12px;
+ color:#e9d5ff;
+ background:#a855f71a;
+ font-size:12px;
+ line-height:1.7;
+}
+
+.plans{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:12px;
+}
+
+.plan{
+ display:flex;
+ flex-direction:column;
+ padding:17px 13px;
+ border:1px solid #ffffff29;
+ border-radius:17px;
+ background:#ffffff0b;
+ transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+
+.plan:hover{
+ transform:translateY(-5px);
+ border-color:#a855f7a8;
+ box-shadow:0 12px 35px #0005,0 0 18px #a855f721;
+}
+
+.plan.featured{
+ border-color:var(--purple);
+ box-shadow:0 0 22px #a855f721;
+}
+
+.plan h3{
+ font-size:15px;
+ line-height:1.4;
+ margin-bottom:12px;
+}
+
+.price{
+ font-size:24px;
+ font-weight:900;
+ margin-bottom:13px;
+ color:#f5d0fe;
+}
+
+.plan ul{
+ padding-left:17px;
+ color:#ddd5e9;
+ font-size:12px;
+ line-height:1.65;
+ margin-bottom:18px;
+}
+
+.plan .button{
+ margin-top:auto;
+ font-size:11px;
+ min-height:44px;
+}
+
+.field label{
+ display:block;
+ margin-bottom:8px;
+ font-size:13px;
+ font-weight:700;
+}
+
+.field select{
+ width:100%;
+ padding:13px;
+ border:1px solid #ffffff33;
+ border-radius:11px;
+ color:white;
+ background:#171126;
+ font-size:14px;
+}
+
+.field select option{color:white;background:#171126}
+
+.result{
+ display:none;
+ margin-top:20px;
+ padding:17px;
+ border:1px solid #a855f780;
+ border-radius:14px;
+ background:#a855f71a;
+}
+
+.result h3{margin-bottom:9px}
+
+.result p{
+ color:#e1d8ed;
+ font-size:13px;
+ line-height:1.7;
+ margin-bottom:14px;
+}
+
+.small{
+ color:#c0b4d1;
+ font-size:11px;
+ line-height:1.7;
+ text-align:center;
+ margin-top:17px;
+}
+
+.footer{
+ padding:4px 0 20px;
+ color:#c0b4d1;
+ font-size:11px;
+ letter-spacing:1.5px;
+ text-align:center;
+}
+
+/* =========================================
+   NOTFAKE T7 — ABERTURA CINEMATOGRÁFICA
+========================================= */
+
 #dragon-intro{
- position:fixed;inset:0;z-index:9999;overflow:hidden;
- display:grid;place-items:center;
- background:radial-gradient(ellipse at center,#351052,#10051c 50%,#030207);
- animation:intro-exit 1s ease 6.5s forwards;
+ position:fixed;
+ inset:0;
+ z-index:9999;
+ display:grid;
+ place-items:center;
+ overflow:hidden;
+ isolation:isolate;
+ background:
+ radial-gradient(ellipse at 50% 46%,
+ #541078 0%,#21082f 32%,
+ #0b0614 67%,#020105 100%);
+ animation:intro-exit 1.1s cubic-bezier(.7,0,.2,1) 7.8s forwards;
 }
-.dragon-scene{position:relative;text-align:center;width:100%;padding:20px}
+
+#dragon-intro::before{
+ content:"";
+ position:absolute;
+ z-index:-1;
+ inset:-50%;
+ background:conic-gradient(
+  from 0deg,
+  transparent,
+  #a855f755,
+  transparent,
+  #ec489955,
+  transparent,
+  #7c3aed66,
+  transparent
+ );
+ animation:cosmic-spin 12s linear infinite;
+}
+
+#dragon-intro::after{
+ content:"";
+ position:absolute;
+ inset:0;
+ z-index:4;
+ pointer-events:none;
+ background:radial-gradient(
+  ellipse at center,
+  transparent 20%,
+  #00000055 70%,
+  #000 120%
+ );
+}
+
+.dragon-scene{
+ position:relative;
+ z-index:2;
+ width:100%;
+ padding:20px;
+ text-align:center;
+ perspective:900px;
+}
+
 .dragon{
- font-size:clamp(110px,32vw,230px);
- filter:drop-shadow(0 0 22px #a855f7);
- animation:dragon-entry 1.8s ease-out both,dragon-roar 1s ease-in-out 1.8s 2;
+ position:relative;
+ font-size:clamp(120px,34vw,245px);
+ line-height:1.1;
+ filter:
+  drop-shadow(0 0 12px #d946ef)
+  drop-shadow(0 0 35px #a855f7)
+  drop-shadow(0 0 70px #7c3aed);
+ transform-origin:center;
+ animation:
+  dragon-entry 1.5s cubic-bezier(.12,.8,.18,1.2) both,
+  dragon-float 2.8s ease-in-out 1.5s infinite;
 }
+
 .dragon-fire{
- width:18px;height:14px;margin:-4px auto 24px;border-radius:50%;
- background:#fff0a0;
- box-shadow:0 0 20px 14px #ff7b00,0 0 55px 30px #ff2600,0 0 90px 45px #a855f7;
- animation:fire-blast .8s ease-in-out 2s 3;
+ position:relative;
+ width:10px;
+ height:10px;
+ margin:8px auto 27px;
+ border-radius:50%;
+ background:#fff8c5;
+ box-shadow:
+  0 0 15px 8px #ffdf72,
+  0 0 35px 20px #ff7b00,
+  0 0 70px 36px #ff2600,
+  0 0 110px 48px #a855f7;
+ animation:fire-blast 1.2s ease-in-out 1.8s 3;
 }
+
 .dragon-title{
- font-size:clamp(32px,9vw,58px);font-weight:900;color:white;
- text-shadow:0 0 25px #a855f7;
- animation:reveal-title .8s ease 3s both;
+ position:relative;
+ font-size:clamp(34px,9vw,64px);
+ font-weight:1000;
+ letter-spacing:clamp(2px,1vw,7px);
+ color:white;
+ text-shadow:
+  0 0 8px #fff,
+  0 0 22px #a855f7,
+  0 0 50px #a855f7;
+ animation:title-impact 1s cubic-bezier(.16,1,.3,1) 2.8s both;
 }
-.dragon-title span{color:#ec4899}
+
+.dragon-title span{
+ color:#f0abfc;
+ text-shadow:
+  0 0 10px #ec4899,
+  0 0 30px #ec4899,
+  0 0 55px #a855f7;
+}
+
 .dragon-message{
- margin-top:12px;letter-spacing:3px;font-size:11px;color:#e9d5ff;
- animation:reveal-title .7s ease 3.5s both;
+ margin-top:14px;
+ font-size:11px;
+ font-weight:800;
+ letter-spacing:4px;
+ color:#e9d5ff;
+ animation:message-reveal .8s ease 3.5s both;
 }
+
+.energy-ring{
+ position:absolute;
+ z-index:1;
+ left:50%;
+ top:42%;
+ width:min(72vw,390px);
+ aspect-ratio:1;
+ border:2px solid #d946ef99;
+ border-radius:50%;
+ box-shadow:0 0 20px #a855f788,inset 0 0 25px #a855f744;
+ transform:translate(-50%,-50%) scale(.2);
+ opacity:0;
+ pointer-events:none;
+ animation:ring-burst 2s ease-out 1.3s 2;
+}
+
+.energy-ring.second{
+ border-color:#fb718588;
+ animation-delay:2s;
+}
+
+.embers{
+ position:absolute;
+ inset:0;
+ overflow:hidden;
+ pointer-events:none;
+ z-index:1;
+}
+
+.ember{
+ position:absolute;
+ bottom:-20px;
+ left:var(--x);
+ width:var(--s);
+ height:var(--s);
+ border-radius:50%;
+ background:#ffb347;
+ box-shadow:0 0 8px #ff6b00,0 0 15px #a855f7;
+ opacity:0;
+ animation:ember-rise var(--d) linear var(--delay) infinite;
+}
+
 #skip-intro{
- position:absolute;bottom:25px;right:18px;padding:12px 15px;color:white;
- background:#21102f;border:1px solid var(--purple);border-radius:12px;
- cursor:pointer;font-weight:bold
+ position:absolute;
+ z-index:6;
+ right:18px;
+ bottom:25px;
+ padding:12px 16px;
+ border:1px solid #c084fc;
+ border-radius:12px;
+ color:white;
+ background:#170b25ed;
+ font-size:11px;
+ font-weight:900;
+ letter-spacing:1px;
+ cursor:pointer;
+ transition:background .2s,box-shadow .2s;
 }
+
+#skip-intro:hover{
+ background:#6b21a8;
+ box-shadow:0 0 25px #a855f7aa;
+}
+
 #dragon-intro.finished{display:none}
+
+@keyframes cosmic-spin{
+ to{transform:rotate(360deg)}
+}
+
 @keyframes dragon-entry{
- from{transform:translateY(-100vh) scale(.25) rotate(-15deg);opacity:0}
- to{transform:translateY(0) scale(1) rotate(0);opacity:1}
+ 0%{
+  transform:translateY(-100vh) scale(.12) rotate(-20deg);
+  opacity:0;
+ }
+ 65%{
+  transform:translateY(12px) scale(1.08) rotate(3deg);
+  opacity:1;
+ }
+ 82%{transform:translateY(-7px) scale(.97)}
+ 100%{transform:translateY(0) scale(1);opacity:1}
 }
-@keyframes dragon-roar{
- 0%,100%{transform:scale(1)}
- 50%{transform:scale(1.1) rotate(-3deg)}
+
+@keyframes dragon-float{
+ 0%,100%{transform:translateY(0) scale(1)}
+ 50%{transform:translateY(-12px) scale(1.035)}
 }
+
 @keyframes fire-blast{
- 0%{transform:scale(.5);opacity:.3}
- 50%{transform:scale(8,3);opacity:1}
- 100%{transform:scale(1);opacity:.2}
+ 0%{transform:scale(.2);opacity:.2}
+ 35%{transform:scale(8,3);opacity:1}
+ 65%{transform:scale(5,2);opacity:.8}
+ 100%{transform:scale(.5);opacity:.15}
 }
-@keyframes reveal-title{
- from{opacity:0;transform:translateY(25px)}
+
+@keyframes ring-burst{
+ 0%{
+  transform:translate(-50%,-50%) scale(.2);
+  opacity:0;
+ }
+ 25%{opacity:.9}
+ 100%{
+  transform:translate(-50%,-50%) scale(1.8);
+  opacity:0;
+ }
+}
+
+@keyframes title-impact{
+ 0%{
+  opacity:0;
+  transform:scale(2.5) translateY(20px);
+  filter:blur(12px);
+ }
+ 65%{
+  opacity:1;
+  transform:scale(.92);
+  filter:blur(0);
+ }
+ 82%{transform:scale(1.06)}
+ 100%{
+  opacity:1;
+  transform:scale(1);
+  filter:blur(0);
+ }
+}
+
+@keyframes message-reveal{
+ from{opacity:0;transform:translateY(18px)}
  to{opacity:1;transform:translateY(0)}
 }
-@keyframes intro-exit{
- to{opacity:0;visibility:hidden;pointer-events:none}
+
+@keyframes ember-rise{
+ 0%{
+  transform:translate3d(0,0,0) scale(.4);
+  opacity:0;
+ }
+ 15%{opacity:1}
+ 75%{opacity:.8}
+ 100%{
+  transform:translate3d(var(--drift),-110vh,0) scale(1.5);
+  opacity:0;
+ }
 }
+
+@keyframes intro-exit{
+ 0%{opacity:1;visibility:visible}
+ 100%{opacity:0;visibility:hidden;pointer-events:none}
+}
+
+@keyframes logo-glow{
+ 0%,100%{box-shadow:0 0 25px #a855f755}
+ 50%{box-shadow:0 0 42px #ec489980}
+}
+
+/* RESPONSIVIDADE */
 @media(max-width:650px){
  body{background-attachment:scroll}
+
  .plans{grid-template-columns:1fr}
+
  .plan{padding:19px}
+
  .price{font-size:27px}
+
  .plan ul{font-size:13px}
+
  .section{padding:23px 16px}
+
+ #dragon-intro{
+  background:radial-gradient(
+   ellipse at center,#42105d,#10051c 58%,#020105
+  );
+ }
+
+ .dragon-message{letter-spacing:2.5px}
+
+ #skip-intro{bottom:18px;right:12px}
 }
+
+/* ACESSIBILIDADE */
 @media(prefers-reduced-motion:reduce){
- #dragon-intro{animation-duration:.5s}
- .dragon,.dragon-fire,.dragon-title,.dragon-message{animation-duration:.5s;animation-delay:0s}
+ html{scroll-behavior:auto}
+
+ #dragon-intro{
+  animation-duration:.5s;
+  animation-delay:2s;
+ }
+
+ .dragon,.dragon-fire,.dragon-title,.dragon-message,
+ .energy-ring,.energy-ring.second,.ember,.logo{
+  animation-duration:.5s;
+  animation-delay:0s;
+  animation-iteration-count:1;
+ }
 }
 </style>
 </head>
+
 <body>
 
-<!-- CENA INICIAL -->
+<!-- ABERTURA ANIMADA -->
 <div id="dragon-intro" aria-label="Abertura animada NOTFAKE T7">
+
+ <div class="energy-ring"></div>
+ <div class="energy-ring second"></div>
+ <div class="embers" id="embers"></div>
+
  <div class="dragon-scene">
   <div class="dragon" aria-hidden="true">🐉</div>
   <div class="dragon-fire"></div>
-  <div class="dragon-title">NOTFAKE <span>T7</span></div>
-  <p class="dragon-message">O FOGO ESTÁ CHEGANDO...</p>
+
+  <div class="dragon-title">
+   NOTFAKE <span>T7</span>
+  </div>
+
+  <p class="dragon-message">
+   O FOGO ESTÁ CHEGANDO...
+  </p>
  </div>
- <button id="skip-intro" type="button">PULAR ANIMAÇÃO »</button>
+
+ <button id="skip-intro" type="button">
+  PULAR ANIMAÇÃO »
+ </button>
 </div>
 
 <div class="glow one"></div>
 <div class="glow two"></div>
 
 <main class="container">
+
+ <!-- CARTÃO PRINCIPAL -->
  <header class="card">
+
   <div class="logo">T7</div>
+
   <h1>NOTFAKE T7</h1>
-  <p class="subtitle">Bem-vindo ao nosso espaço oficial.<br>Escolha abaixo onde deseja acessar.</p>
+
+  <p class="subtitle">
+   Bem-vindo ao nosso espaço oficial.<br>
+   Escolha abaixo onde deseja acessar.
+  </p>
+
   <div class="line"></div>
+
   <nav class="links" aria-label="Links oficiais">
-   <a class="link primary" href="https://project-z81u0-ozbk40wp4-rochasilvaalisson74-hubs-projects.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="icon">🌐</span>ACESSAR O SITE</a>
-   <a class="link" href="https://www.tiktok.com/@t7.digital?_r=1&_t=ZS-9AZozRI0Vle" target="_blank" rel="noopener noreferrer"><span class="icon">🎵</span>TIKTOK OFICIAL</a>
-   <a class="link" href="https://www.instagram.com/notfake.t7?xtok=YzE3ZHc4NmRqbW9k&utm_source=qr" target="_blank" rel="noopener noreferrer"><span class="icon">📸</span>INSTAGRAM OFICIAL</a>
-   <a class="link" href="https://chat.whatsapp.com/LnGAvwhtxd2IWUxkmBZSWW?mode=gi_t" target="_blank" rel="noopener noreferrer"><span class="icon">💬</span>GRUPO DO WHATSAPP</a>
-   <a class="link primary" href="#mentorias"><span class="icon">🚀</span>CONHECER AS MENTORIAS T7</a>
+
+   <a class="link primary"
+      href="https://project-z81u0-ozbk40wp4-rochasilvaalisson74-hubs-projects.vercel.app/"
+      target="_blank" rel="noopener noreferrer">
+    <span class="icon">🌐</span>ACESSAR O SITE
+   </a>
+
+   <a class="link"
+      href="https://www.tiktok.com/@t7.digital?_r=1&_t=ZS-9AZozRI0Vle"
+      target="_blank" rel="noopener noreferrer">
+    <span class="icon">🎵</span>TIKTOK OFICIAL
+   </a>
+
+   <a class="link"
+      href="https://www.instagram.com/notfake.t7?xtok=YzE3ZHc4NmRqbW9k&utm_source=qr"
+      target="_blank" rel="noopener noreferrer">
+    <span class="icon">📸</span>INSTAGRAM OFICIAL
+   </a>
+
+   <a class="link"
+      href="https://chat.whatsapp.com/LnGAvwhtxd2IWUxkmBZSWW?mode=gi_t"
+      target="_blank" rel="noopener noreferrer">
+    <span class="icon">💬</span>GRUPO DO WHATSAPP
+   </a>
+
+   <a class="link primary" href="#mentorias">
+    <span class="icon">🚀</span>CONHECER AS MENTORIAS T7
+   </a>
+
   </nav>
+
   <p class="small">NOTFAKE T7 · LINKS OFICIAIS</p>
  </header>
 
+ <!-- MENTORIAS -->
  <section class="section" id="mentorias">
+
   <h2>ESCOLHA SUA JORNADA T7</h2>
-  <p class="section-intro">Conheça as opções de orientação sobre divulgação, abordagem e vendas digitais.</p>
-  <div class="notice"><strong>Pré-inscrições:</strong> o conteúdo das aulas ainda está sendo preparado. Antes de pagar, confirme pelo WhatsApp a data de início, as entregas e as condições de contratação.</div>
+
+  <p class="section-intro">
+   Conheça as opções de orientação sobre divulgação,
+   abordagem e vendas digitais.
+  </p>
+
+  <div class="notice">
+   <strong>Pré-inscrições:</strong> o conteúdo das aulas ainda
+   está sendo preparado. Antes de pagar, confirme pelo WhatsApp
+   a data de início, as entregas e as condições de contratação.
+  </div>
 
   <div class="plans">
+
    <article class="plan">
-    <h3>🚀 T7 Primeira Venda</h3><div class="price">R$ 120,00</div>
-    <ul><li>Introdução às vendas digitais</li><li>Roteiro de divulgação previsto</li><li>Orientação de abordagem prevista</li><li>Suporte por 7 dias</li></ul>
-    <a class="button" href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20T7%20Primeira%20Venda%20de%20R%24%20120." target="_blank" rel="noopener noreferrer">TENHO INTERESSE</a>
+    <h3>🚀 T7 Primeira Venda</h3>
+    <div class="price">R$ 120,00</div>
+
+    <ul>
+     <li>Introdução às vendas digitais</li>
+     <li>Roteiro de divulgação previsto</li>
+     <li>Orientação de abordagem prevista</li>
+     <li>Suporte por 7 dias</li>
+    </ul>
+
+    <a class="button"
+       href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20T7%20Primeira%20Venda%20de%20R%24%20120."
+       target="_blank" rel="noopener noreferrer">
+     TENHO INTERESSE
+    </a>
    </article>
+
    <article class="plan featured">
-    <h3>📈 Método T7 — Renda Extra</h3><div class="price">R$ 280,00</div>
-    <ul><li>Planejamento de divulgação previsto</li><li>Orientação de abordagem prevista</li><li>Plano de atividades previsto</li><li>Suporte por 30 dias</li></ul>
-    <a class="button primary" href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20M%C3%A9todo%20T7%20de%20R%24%20280." target="_blank" rel="noopener noreferrer">TENHO INTERESSE</a>
+    <h3>📈 Método T7 — Renda Extra</h3>
+    <div class="price">R$ 280,00</div>
+
+    <ul>
+     <li>Planejamento de divulgação previsto</li>
+     <li>Orientação de abordagem prevista</li>
+     <li>Plano de atividades previsto</li>
+     <li>Suporte por 30 dias</li>
+    </ul>
+
+    <a class="button primary"
+       href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20M%C3%A9todo%20T7%20de%20R%24%20280."
+       target="_blank" rel="noopener noreferrer">
+     TENHO INTERESSE
+    </a>
    </article>
+
    <article class="plan">
-    <h3>👑 T7 Mentoria VIP</h3><div class="price">R$ 400,00</div>
-    <ul><li>Orientação personalizada prevista</li><li>Plano de ação individual previsto</li><li>2 encontros individuais em 30 dias</li><li>Suporte por 30 dias</li></ul>
-    <a class="button" href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20T7%20Mentoria%20VIP%20de%20R%24%20400." target="_blank" rel="noopener noreferrer">TENHO INTERESSE</a>
+    <h3>👑 T7 Mentoria VIP</h3>
+    <div class="price">R$ 400,00</div>
+
+    <ul>
+     <li>Orientação personalizada prevista</li>
+     <li>Plano de ação individual previsto</li>
+     <li>2 encontros individuais em 30 dias</li>
+     <li>Suporte por 30 dias</li>
+    </ul>
+
+    <a class="button"
+       href="https://wa.me/5514981687557?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20pr%C3%A9-inscri%C3%A7%C3%A3o%20T7%20Mentoria%20VIP%20de%20R%24%20400."
+       target="_blank" rel="noopener noreferrer">
+     TENHO INTERESSE
+    </a>
    </article>
+
   </div>
-  <p class="small"><strong>Suporte dos três planos:</strong> WhatsApp todos os dias, das 08h às 22h, horário de Brasília. As respostas acontecem conforme a fila de mensagens; não há garantia de resposta instantânea. O período de suporte começa conforme as condições combinadas na contratação. Resultados financeiros não são garantidos.</p>
+
+  <p class="small">
+   <strong>Suporte dos três planos:</strong> WhatsApp todos os
+   dias, das 08h às 22h, horário de Brasília. As respostas
+   acontecem conforme a fila de mensagens; não há garantia
+   de resposta instantânea. O período de suporte começa conforme
+   as condições combinadas na contratação. Resultados financeiros
+   não são garantidos.
+  </p>
  </section>
 
+ <!-- QUESTIONÁRIO -->
  <section class="section" id="questionario">
+
   <h2>DESCUBRA SEU PLANO</h2>
-  <p class="section-intro">Responda a quatro perguntas para receber uma sugestão de plano. A recomendação não garante renda ou vendas.</p>
+
+  <p class="section-intro">
+   Responda a quatro perguntas para receber uma sugestão de plano.
+   A recomendação não garante renda ou vendas.
+  </p>
+
   <form class="form" id="quiz">
-   <div class="field"><label for="idade">1. Qual é sua faixa etária?</label><select id="idade" required><option value="">Selecione</option><option value="menor">Menos de 18 anos</option><option value="18-24">18 a 24 anos</option><option value="25-34">25 a 34 anos</option><option value="35+">35 anos ou mais</option></select></div>
-   <div class="field"><label for="meta">2. Qual é sua meta mensal de renda extra?</label><select id="meta" required><option value="">Selecione</option><option value="500">Até R$ 500</option><option value="1500">R$ 500 a R$ 1.500</option><option value="3000">R$ 1.500 a R$ 3.000</option><option value="mais">Mais de R$ 3.000</option></select></div>
-   <div class="field"><label for="experiencia">3. Você já tentou vender algo?</label><select id="experiencia" required><option value="">Selecione</option><option value="nao">Ainda não</option><option value="alguma">Já tentei algumas vezes</option><option value="sim">Já vendo regularmente</option></select></div>
-   <div class="field"><label for="tempo">4. Quanto tempo pode dedicar por dia?</label><select id="tempo" required><option value="">Selecione</option><option value="1">Menos de 1 hora</option><option value="2">1 a 2 horas</option><option value="3">3 horas ou mais</option></select></div>
-   <button class="button primary" type="submit">VER MINHA RECOMENDAÇÃO</button>
+
+   <div class="field">
+    <label for="idade">1. Qual é sua faixa etária?</label>
+    <select id="idade" required>
+     <option value="">Selecione</option>
+     <option value="menor">Menos de 18 anos</option>
+     <option value="18-24">18 a 24 anos</option>
+     <option value="25-34">25 a 34 anos</option>
+     <option value="35+">35 anos ou mais</option>
+    </select>
+   </div>
+
+   <div class="field">
+    <label for="meta">2. Qual é sua meta mensal de renda extra?</label>
+    <select id="meta" required>
+     <option value="">Selecione</option>
+     <option value="500">Até R$ 500</option>
+     <option value="1500">R$ 500 a R$ 1.500</option>
+     <option value="3000">R$ 1.500 a R$ 3.000</option>
+     <option value="mais">Mais de R$ 3.000</option>
+    </select>
+   </div>
+
+   <div class="field">
+    <label for="experiencia">3. Você já tentou vender algo?</label>
+    <select id="experiencia" required>
+     <option value="">Selecione</option>
+     <option value="nao">Ainda não</option>
+     <option value="alguma">Já tentei algumas vezes</option>
+     <option value="sim">Já vendo regularmente</option>
+    </select>
+   </div>
+
+   <div class="field">
+    <label for="tempo">4. Quanto tempo pode dedicar por dia?</label>
+    <select id="tempo" required>
+     <option value="">Selecione</option>
+     <option value="1">Menos de 1 hora</option>
+     <option value="2">1 a 2 horas</option>
+     <option value="3">3 horas ou mais</option>
+    </select>
+   </div>
+
+   <button class="button primary" type="submit">
+    VER MINHA RECOMENDAÇÃO
+   </button>
+
   </form>
-  <div class="result" id="resultado" aria-live="polite"><h3 id="resultadoTitulo"></h3><p id="resultadoTexto"></p><a class="button primary" id="resultadoWhats" href="https://wa.me/5514981687557" target="_blank" rel="noopener noreferrer">CONVERSAR NO WHATSAPP</a></div>
-  <p class="small">As respostas são usadas nesta página para sugerir um plano. O formulário não envia nem armazena suas respostas em um banco de dados.</p>
+
+  <div class="result" id="resultado" aria-live="polite">
+   <h3 id="resultadoTitulo"></h3>
+   <p id="resultadoTexto"></p>
+
+   <a class="button primary"
+      id="resultadoWhats"
+      href="https://wa.me/5514981687557"
+      target="_blank" rel="noopener noreferrer">
+    CONVERSAR NO WHATSAPP
+   </a>
+  </div>
+
+  <p class="small">
+   As respostas são usadas nesta página para sugerir um plano.
+   O formulário não envia nem armazena suas respostas em um
+   banco de dados.
+  </p>
+
  </section>
 
- <footer class="footer">NOTFAKE T7 · APRENDA · PRATIQUE · EVOLUA</footer>
+ <footer class="footer">
+  NOTFAKE T7 · APRENDA · PRATIQUE · EVOLUA
+ </footer>
+
 </main>
 
 <script>
-/* CONTROLE DA ABERTURA */
+/* =========================================
+   CONTROLE DA ABERTURA CINEMATOGRÁFICA
+========================================= */
+
 (function(){
- const intro=document.getElementById("dragon-intro");
- const skip=document.getElementById("skip-intro");
- let finished=false;
+ const intro = document.getElementById("dragon-intro");
+ const skip = document.getElementById("skip-intro");
+ const embers = document.getElementById("embers");
+
+ if(!intro || !skip || !embers) return;
+
+ let finished = false;
+
  function finishIntro(){
-  if(finished)return;
-  finished=true;
+  if(finished) return;
+
+  finished = true;
   intro.classList.add("finished");
+  intro.setAttribute("aria-hidden","true");
  }
+
  skip.addEventListener("click",finishIntro);
+
  intro.addEventListener("animationend",function(event){
-  if(event.animationName==="intro-exit")finishIntro();
+  if(
+   event.target === intro &&
+   event.animationName === "intro-exit"
+  ){
+   finishIntro();
+  }
  });
+
+ /* Partículas leves, sem imagens externas */
+ const reducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+ ).matches;
+
+ if(!reducedMotion){
+  const particleCount = window.innerWidth < 600 ? 28 : 48;
+  const fragment = document.createDocumentFragment();
+
+  for(let i=0;i<particleCount;i++){
+   const particle = document.createElement("span");
+   const size = (Math.random()*3+1).toFixed(1);
+
+   particle.className = "ember";
+
+   particle.style.setProperty(
+    "--x",Math.random()*100+"%"
+   );
+
+   particle.style.setProperty(
+    "--s",size+"px"
+   );
+
+   particle.style.setProperty(
+    "--d",(Math.random()*4+4)+"s"
+   );
+
+   particle.style.setProperty(
+    "--delay",(Math.random()*7)+"s"
+   );
+
+   particle.style.setProperty(
+    "--drift",(Math.random()*140-70)+"px"
+   );
+
+   fragment.appendChild(particle);
+  }
+
+  embers.appendChild(fragment);
+ }
+
+ /* Segurança extra para nunca prender o visitante */
+ window.setTimeout(finishIntro,11000);
 })();
 
-/* QUESTIONÁRIO */
-const quiz=document.getElementById("quiz");
-const resultado=document.getElementById("resultado");
-const resultadoTitulo=document.getElementById("resultadoTitulo");
-const resultadoTexto=document.getElementById("resultadoTexto");
-const resultadoWhats=document.getElementById("resultadoWhats");
+
+/* =========================================
+   QUESTIONÁRIO E RECOMENDAÇÃO DE PLANOS
+========================================= */
+
+const quiz = document.getElementById("quiz");
+const resultado = document.getElementById("resultado");
+const resultadoTitulo = document.getElementById("resultadoTitulo");
+const resultadoTexto = document.getElementById("resultadoTexto");
+const resultadoWhats = document.getElementById("resultadoWhats");
 
 quiz.addEventListener("submit",function(event){
  event.preventDefault();
- const idade=document.getElementById("idade").value;
- const meta=document.getElementById("meta").value;
- const experiencia=document.getElementById("experiencia").value;
- const tempo=document.getElementById("tempo").value;
 
- if(idade==="menor"){
-  resultadoTitulo.textContent="Converse com um responsável";
-  resultadoTexto.textContent="Se você tem menos de 18 anos, converse com seu responsável antes de contratar. Confirmem juntos o conteúdo, o preço e as condições.";
-  resultadoWhats.href="https://wa.me/5514981687557?text="+encodeURIComponent("Olá! Quero conhecer as condições das mentorias T7 com meu responsável.");
+ const idade = document.getElementById("idade").value;
+ const meta = document.getElementById("meta").value;
+ const experiencia = document.getElementById("experiencia").value;
+ const tempo = document.getElementById("tempo").value;
+
+ if(idade === "menor"){
+  resultadoTitulo.textContent = "Converse com um responsável";
+
+  resultadoTexto.textContent =
+   "Se você tem menos de 18 anos, converse com seu responsável antes de contratar. Confirmem juntos o conteúdo, o preço e as condições.";
+
+  resultadoWhats.href =
+   "https://wa.me/5514981687557?text="+
+   encodeURIComponent(
+    "Olá! Quero conhecer as condições das mentorias T7 com meu responsável."
+   );
+
  }else{
   let plano,preco,motivo;
-  if(experiencia==="nao"){
-   plano="T7 Primeira Venda";preco="R$ 120,00";
-   motivo="pode ser um ponto de partida para estudar os fundamentos de divulgação e abordagem.";
-  }else if(experiencia==="sim"||meta==="mais"||tempo==="3"){
-   plano="T7 Mentoria VIP";preco="R$ 400,00";
-   motivo="pode ser uma opção para quem busca orientação personalizada e dois encontros individuais.";
+
+  if(experiencia === "nao"){
+   plano = "T7 Primeira Venda";
+   preco = "R$ 120,00";
+   motivo =
+    "pode ser um ponto de partida para estudar os fundamentos de divulgação e abordagem.";
+
+  }else if(
+   experiencia === "sim" ||
+   meta === "mais" ||
+   tempo === "3"
+  ){
+   plano = "T7 Mentoria VIP";
+   preco = "R$ 400,00";
+   motivo =
+    "pode ser uma opção para quem busca orientação personalizada e dois encontros individuais.";
+
   }else{
-   plano="Método T7 — Renda Extra";preco="R$ 280,00";
-   motivo="pode ajudar a estruturar uma rotina de divulgação e atividades.";
+   plano = "Método T7 — Renda Extra";
+   preco = "R$ 280,00";
+   motivo =
+    "pode ajudar a estruturar uma rotina de divulgação e atividades.";
   }
-  resultadoTitulo.textContent="Plano sugerido: "+plano;
-  resultadoTexto.textContent="Pelas suas respostas, esse plano "+motivo+" Valor anunciado: "+preco+". Não há garantia de renda ou vendas. Como as aulas estão em preparação, confirme pelo WhatsApp a data de início, as entregas e as condições antes de contratar.";
-  resultadoWhats.href="https://wa.me/5514981687557?text="+encodeURIComponent("Olá! Respondi ao questionário NOTFAKE T7. O plano sugerido foi "+plano+" ("+preco+"). Quero saber a data de início, as entregas e as condições de suporte.");
+
+  resultadoTitulo.textContent = "Plano sugerido: "+plano;
+
+  resultadoTexto.textContent =
+   "Pelas suas respostas, esse plano "+motivo+
+   " Valor anunciado: "+preco+
+   ". Não há garantia de renda ou vendas. Como as aulas estão em preparação, confirme pelo WhatsApp a data de início, as entregas e as condições antes de contratar.";
+
+  resultadoWhats.href =
+   "https://wa.me/5514981687557?text="+
+   encodeURIComponent(
+    "Olá! Respondi ao questionário NOTFAKE T7. O plano sugerido foi "+
+    plano+" ("+preco+
+    "). Quero saber a data de início, as entregas e as condições de suporte."
+   );
  }
- resultado.style.display="block";
- resultado.scrollIntoView({behavior:"smooth",block:"nearest"});
+
+ resultado.style.display = "block";
+
+ resultado.scrollIntoView({
+  behavior: window.matchMedia(
+   "(prefers-reduced-motion: reduce)"
+  ).matches ? "auto" : "smooth",
+  block:"nearest"
+ });
 });
 </script>
+
 </body>
 </html>
